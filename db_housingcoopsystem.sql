@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 02, 2025 at 02:35 PM
+-- Generation Time: Nov 07, 2025 at 10:13 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -20,48 +20,43 @@ SET time_zone = "+00:00";
 --
 -- Database: `db_housingcoopsystem`
 --
+CREATE DATABASE IF NOT EXISTS `db_housingcoopsystem` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `db_housingcoopsystem`;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admin`
+-- Table structure for table `tbl_admin`
 --
 
-CREATE TABLE `admin` (
+DROP TABLE IF EXISTS `tbl_admin`;
+CREATE TABLE `tbl_admin` (
   `id` int(10) NOT NULL,
   `firstName` varchar(100) NOT NULL,
   `lastName` varchar(100) NOT NULL,
-  `phoneNumber` bigint(15) NOT NULL,
+  `phoneNumber` bigint(11) NOT NULL,
   `unitNumber` int(5) NOT NULL,
   `status` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `admin`
+-- Dumping data for table `tbl_admin`
 --
 
-INSERT INTO `admin` (`id`, `firstName`, `lastName`, `phoneNumber`, `unitNumber`, `status`) VALUES
+INSERT INTO `tbl_admin` (`id`, `firstName`, `lastName`, `phoneNumber`, `unitNumber`, `status`) VALUES
 (1, 'Arvin', 'Posadas', 9234567819, 1, 'ACTIVE'),
-(2, 'Julien', 'Villanueva', 9931236547, 2, 'INACTIVE'),
-(3, 'Harriet', 'Dimapilis', 9987654321, 3, 'ACTIVE'),
-(4, 'Evan', 'Famadico', 9871234567, 4, 'INACTIVE'),
-(5, 'Marc ', 'Spector', 9105550001, 5, 'ACTIVE'),
-(6, 'Steven', 'Grant', 9105550002, 6, 'INACTIVE'),
-(7, 'Jake ', 'Lockley', 9105550003, 7, 'INACTIVE'),
-(8, 'Arthur', 'Harrow', 9105550004, 8, 'INACTIVE'),
-(9, 'Reed', 'Richards', 9105550005, 9, 'ACTIVE'),
-(10, 'Johnny ', 'Storm', 9105550006, 10, 'INACTIVE'),
-(11, 'Sue ', 'Storm', 9605555002, 11, 'ACTIVE'),
-(12, 'Ben', 'Grimm', 9805557001, 12, 'INACTIVE');
+(2, 'Julien', 'Villanueva', 9871234567, 1, 'ACTIVE'),
+(3, 'James', 'Dimapilis', 9900112234, 3, 'ACTIVE'),
+(4, 'Evan', 'Famadico', 9221343256, 2, 'ACTIVE');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `admin`
+-- Indexes for table `tbl_admin`
 --
-ALTER TABLE `admin`
+ALTER TABLE `tbl_admin`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -69,10 +64,10 @@ ALTER TABLE `admin`
 --
 
 --
--- AUTO_INCREMENT for table `admin`
+-- AUTO_INCREMENT for table `tbl_admin`
 --
-ALTER TABLE `admin`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+ALTER TABLE `tbl_admin`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
