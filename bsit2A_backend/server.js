@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Routes
 app.use('/api/students', studentRoutes);
-app.use('/api/departments', departmentRoutes)
+app.use('/api/departments', departmentRoutes);
 
 
 

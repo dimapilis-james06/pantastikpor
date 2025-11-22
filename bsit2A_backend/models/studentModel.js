@@ -4,7 +4,7 @@ const Student = {
   // Get all students
   getAll: () => {
     return new Promise((resolve, reject) => {
-      db.query('SELECT * FROM tbl_students', (err, results) => {
+      db.query('SELECT * FROM db_bsit2a', (err, results) => {
         if (err) reject(err);
         resolve(results);
       });
@@ -14,7 +14,7 @@ const Student = {
   // Get student by ID
    getById: (id) => {
       return new Promise((resolve, reject) => {
-        db.query('SELECT * FROM tbl_students WHERE id = ?', [id], (err, results) => {
+        db.query('SELECT * FROM db_bsit2a WHERE id = ?', [id], (err, results) => {
          if (err) reject(err);
         resolve(results[0]);
         });
